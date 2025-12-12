@@ -316,3 +316,46 @@ window.addEventListener('load', () => {
     const loadTime = performance.now();
     console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
 });
+
+// Modal Functionality for Image Preview
+// Load elements
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const fullImageBtn = document.getElementById('fullImageLink'); // Elemen tombol baru
+
+function openModal(imageSrc) {
+    // 1. Set modal image source
+    modalImg.src = imageSrc;
+    
+    // 2. Set link on "Open Full Image" button to match the image source
+    fullImageBtn.href = imageSrc;
+    
+    // 3. Show modal
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+}
+
+// Close Modal Function
+function closeModal() {
+    // Fade out first
+    modal.classList.add('opacity-0');
+    
+    // Wait for animation to finish (300ms as per duration-300 in CSS), then hide
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modalImg.src = ''; // Reset image
+    }, 300);
+    
+    // Enable body scroll again
+    document.body.style.overflow = 'auto';
+}
+
+// Event Listener: Close modal on ESC key press
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape" && !modal.classList.contains('hidden')) {
+        closeModal();
+    }
+});
