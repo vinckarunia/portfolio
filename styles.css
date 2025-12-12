@@ -267,7 +267,7 @@ button:active {
 }
 
 h1, h2, .gradient-text {
-    background: linear-gradient(to right, #9EC5F2, #4E85E3, #3968D7);
+    background: linear-gradient(to right, #dfebfa, #c5dbf8, #9ec5f2);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
