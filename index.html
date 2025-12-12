@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Vincent Karunia Pratama Simanjuntak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="fixed w-full top-0 z-50 border-b border-[#5E9AE8]/20 bg-[#0F172A]/90 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold gradient-text">Vincent Karunia</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="font-medium text-[#F1F6FD] hover:text-[#5E9AE8] transition-colors">Home</a>
+                    <a href="#skills" class="font-medium text-[#F1F6FD] hover:text-[#5E9AE8] transition-colors">Skills</a>
+                    <a href="#projects" class="font-medium text-[#F1F6FD] hover:text-[#5E9AE8] transition-colors">Projects</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-[#F1F6FD]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-[#F1F6FD] hover:text-[#9EC5F2]">Home</a>
+                <a href="#skills" class="block py-2 text-[#F1F6FD] hover:text-[#9EC5F2]">Skills</a>
+                <a href="#projects" class="block py-2 text-[#F1F6FD] hover:text-[#9EC5F2]">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4 gradient-text">Vincent Karunia</h1>
+                    <p class="text-xl text-[#9EC5F2] mb-6 font-medium">Information Systems Student | Data & Tech Enthusiast</p>
+                    
+                    <p class="text-[#F1F6FD]/80 mb-8 leading-relaxed">
+                        An adaptable Information Systems student with a strong foundation in <strong>Database Management, System Analysis, and Data Visualization</strong>. I leverage technology to solve business problems, whether through insightful data analysis, process automation, or efficient database design.
+                    </p>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-[#4E85E3] to-[#3055C5] rounded-lg font-semibold text-white hover:shadow-[0_0_15px_rgba(94,154,232,0.5)] hover:scale-105 transition-all">See My Work</a>
+                        <a href="#skills" class="px-6 py-3 border-2 border-[#5E9AE8] text-[#9EC5F2] rounded-lg font-semibold hover:bg-[#5E9AE8]/10 transition-all">Tech Stack</a>
+                    </div>
+                </div>
+                <div class="flex justify-center fade-in-delay">
+                    <div class="profile-image-container">
+                        <img src="https://via.placeholder.com/400x400/3055C5/ffffff?text=Vincent+Photo" alt="Profile" class="rounded-2xl shadow-2xl relative z-10">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Core Competencies</h2>
+                <div class="relative">
+                    <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#3055C5]/80 p-3 rounded-full hover:bg-[#4E85E3] transition-all text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <div class="overflow-hidden py-4"> 
+                        <div id="carousel" class="flex transition-transform duration-500 ease-out">
+                            <div class="min-w-full md:min-w-[33.333%] p-4">
+                                <div class="carousel-card h-full group hover:bg-[#1D274E]/80 transition-colors">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/4997/4997543.png" alt="Web Dev" class="w-16 h-16 mx-auto mb-4 p-2 bg-white/10 rounded-xl">
+                                    <h3 class="text-xl font-bold mb-2 text-center text-[#9EC5F2]">Web Development</h3>
+                                    <p class="text-[#F1F6FD]/70 text-center text-sm">Building dynamic information systems and web solutions using <strong>PHP</strong> and the <strong>Laravel</strong> framework.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-full md:min-w-[33.333%] p-4">
+                                <div class="carousel-card h-full group hover:bg-[#1D274E]/80 transition-colors">
+                                    <img src="https://images.icon-icons.com/1502/PNG/512/officedatabase_103574.png" alt="Database" class="w-16 h-16 mx-auto mb-4 p-2 bg-white/10 rounded-xl">
+                                    <h3 class="text-xl font-bold mb-2 text-center text-[#9EC5F2]">Database Management</h3>
+                                    <p class="text-[#F1F6FD]/70 text-center text-sm">Designing efficient schemas (ERD), normalization, and managing relational data integrity.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-full md:min-w-[33.333%] p-4">
+                                <div class="carousel-card h-full group hover:bg-[#1D274E]/80 transition-colors">
+                                    <img src="https://cdn.prod.website-files.com/6070969376041590660facbf/60d21de3b35285d693044b2e_5b1956f11b949e07a4123322_trudigital-integration-microsoft-power-bi-icon.jpeg" alt="BI" class="w-16 h-16 mx-auto mb-4 p-2 bg-white/10 rounded-xl">
+                                    <h3 class="text-xl font-bold mb-2 text-center text-[#9EC5F2]">Business Intelligence</h3>
+                                    <p class="text-[#F1F6FD]/70 text-center text-sm">Transforming complex data into visual stories and actionable dashboards for stakeholders.</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-full md:min-w-[33.333%] p-4">
+                                <div class="carousel-card h-full group hover:bg-[#1D274E]/80 transition-colors">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103656.png" alt="Data Science" class="w-16 h-16 mx-auto mb-4 p-2 bg-white/10 rounded-xl">
+                                    <h3 class="text-xl font-bold mb-2 text-center text-[#9EC5F2]">Applied Data Science</h3>
+                                    <p class="text-[#F1F6FD]/70 text-center text-sm">Leveraging <strong>Python</strong> for Web Scraping and Deep Learning models.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#3055C5]/80 p-3 rounded-full hover:bg-[#4E85E3] transition-all text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="min-h-screen py-20 bg-[#0F172A]/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Technical Proficiency</h2>
+                <p class="text-[#9EC5F2]">My technical toolkit organized by domain</p>
+            </div>
+            
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-10 h-1 bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] rounded mr-4"></div>
+                    <h3 class="text-2xl font-bold text-[#F1F6FD]">Data Analysis & BI</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" class="w-10 h-10 mr-3 rounded">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">Tableau</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Visual analytics & dashboards.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" class="w-10 h-10 mr-3 rounded">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">Power BI</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">DAX, Power Query & Reporting.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/metabase.png" alt="Metabase" class="w-10 h-10 mr-3 rounded">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">Metabase</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">SQL Questions & Embedded BI.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg/1991px-Microsoft_Office_Excel_%282025%E2%80%93present%29.svg.png" alt="Excel" class="w-10 h-10 mr-3 rounded">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">Excel</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Pivot, Macros & Cleaning.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-10 h-1 bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] rounded mr-4"></div>
+                    <h3 class="text-2xl font-bold text-[#F1F6FD]">Engineering & Databases</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel" class="w-10 h-10 mr-3 p-0.5 bg-white/5 rounded">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">Laravel</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Fullstack MVC Framework.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="w-10 h-10 mr-3 p-0.5 bg-white/5 rounded">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">PHP</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Backend Logic & Scripting.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="w-10 h-10 mr-3 p-0.5 bg-white/5 rounded">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">Python</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Scraping, Data Mining, Data Cleaning & Deep Learning workflows.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:65%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" class="w-10 h-10 mr-3 bg-white/5 rounded p-1">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">MySQL</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Relational DB & Optimization.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="Postgres" class="w-10 h-10 mr-3 bg-white/5 rounded p-1">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">PostgreSQL</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Advanced RDBMS.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center mb-8">
+                    <div class="w-10 h-1 bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] rounded mr-4"></div>
+                    <h3 class="text-2xl font-bold text-[#F1F6FD]">Tools & Workflow</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" class="w-10 h-10 mr-3 bg-white/5 rounded p-0.5">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">Git & GitHub</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Version Control & Collaboration.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" alt="Colab" class="w-10 h-10 mr-3 bg-white/5 rounded p-0.5">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">Google Colab</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Cloud Notebooks & Computing.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card hover:bg-[#1D274E] transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion" class="w-10 h-10 mr-3 bg-white/5 rounded p-0.5">
+                            <h3 class="text-lg font-bold text-[#F1F6FD]">Notion</h3>
+                        </div>
+                        <p class="text-[#F1F6FD]/60 mb-3 text-xs">Project Management & Docs.</p>
+                        <div class="bg-[#0F172A] rounded-full h-1.5 border border-[#3055C5]/50">
+                            <div class="bg-gradient-to-r from-[#5E9AE8] to-[#3055C5] h-1.5 rounded-full" style="width:95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="min-h-screen py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Featured Projects</h2>
+            <p class="text-center text-[#9EC5F2] mb-12">Applied Data Analysis & Development</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="project-card group hover:transform hover:-translate-y-2 transition-all duration-300 relative flex flex-col h-full">
+                    
+                    <div class="absolute top-4 right-4 z-10 bg-red-600/90 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-200 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                        </span>
+                        Live Production
+                    </div>
+
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-[#4E85E3] to-[#293E7F] flex-shrink-0">
+                        <img src="./assets/gkirahadb.png" alt="DBAJ GKI Raha" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    
+                    <div class="p-6 bg-[#0F172A] border border-[#5E9AE8]/20 rounded-b-xl flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-[#F1F6FD] leading-tight">GKI Raya Hankam Membership Database</h3>
+                        
+                        <p class="text-[#F1F6FD]/70 mb-6 text-sm flex-grow">
+                            Comprehensive church management system built with PHP (Based on <a href="https://github.com/ChurchCRM/CRM" target="_blank" class="text-[#5E9AE8] hover:text-[#9EC5F2] underline decoration-dotted">ChurchCRM</a>). Features real-time demographic dashboards and centralized member data management.
+                        </p>
+                        
+                        <div class="flex gap-3 mt-auto">
+                            <a href="https://gkirahadb.my.id/" target="_blank" class="flex-1 text-center py-2 px-4 rounded-lg bg-[#3055C5] hover:bg-[#4E85E3] text-white text-sm font-semibold transition-all flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Visit Site
+                            </a>
+                            
+                            <a href="https://github.com/vinckarunia/crm-gkirahadb" target="_blank" class="flex-1 text-center py-2 px-4 rounded-lg border border-[#5E9AE8]/50 hover:bg-[#5E9AE8]/10 text-[#9EC5F2] text-sm font-semibold transition-all flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group hover:transform hover:-translate-y-2 transition-all duration-300 relative flex flex-col h-full">
+                    
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-[#2D1B69] to-[#0F172A] flex-shrink-0">
+                        <img src="./assets/mri-brain-tumor.png" alt="MRI Classification" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    
+                    <div class="p-6 bg-[#0F172A] border border-[#5E9AE8]/20 rounded-b-xl flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-[#F1F6FD] leading-tight">MRI Brain Tumor Classification</h3>
+                        
+                        <p class="text-[#F1F6FD]/70 mb-6 text-sm flex-grow">
+                            Medical image analysis using <strong>Python</strong> & <strong>VGG16 (CNN)</strong> on Google Colab to detect tumors from MRI scans with high accuracy.
+                        </p>
+                        
+                        <div class="mt-auto">
+                            <a href="https://colab.research.google.com/drive/1Y-h3aGlEEJRRS0Yahp6oGpanxkDzFhj3?usp=sharing" target="_blank" class="w-full block text-center py-2 px-4 rounded-lg bg-[#3055C5] hover:bg-[#4E85E3] text-white text-sm font-semibold transition-all flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                See on Colab Notebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: rgba(29, 39, 78, 0.5); border-top: 1px solid rgba(94, 154, 232, 0.2);" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Vincent Karunia</h3>
+                    <p class="text-[#F1F6FD]/60">
+                        An adaptable Information Systems student with a strong foundation in <strong>Database Management, System Analysis, and Data Visualization</strong>. I leverage technology to solve business problems, whether through insightful data analysis, process automation, or efficient database design.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-[#F1F6FD]">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-[#F1F6FD]/60 hover:text-[#5E9AE8] transition-colors">Home</a></li>
+                        <li><a href="#skills" class="text-[#F1F6FD]/60 hover:text-[#5E9AE8] transition-colors">Skills</a></li>
+                        <li><a href="#projects" class="text-[#F1F6FD]/60 hover:text-[#5E9AE8] transition-colors">Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-[#F1F6FD]">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/vinckarunia" target="_blank" class="social-icon text-[#F1F6FD] hover:text-[#5E9AE8] transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vinckarunia/" target="_blank" class="social-icon text-[#F1F6FD] hover:text-[#5E9AE8] transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-[#F1F6FD]/40 mt-8 pt-8 border-t border-[#5E9AE8]/20">© 2025 Vincent Karunia. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
